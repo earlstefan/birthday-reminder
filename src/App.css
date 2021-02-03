@@ -1,3 +1,7 @@
+:root {
+  font-family: "Roboto", sans-serif !important;
+}
+
 .App {
   text-align: center;
 }
@@ -13,26 +17,66 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-header {
+  background-color: teal;
+  display: flex;
+  justify-content: center;
+  height: calc(100% - 200px);
+  width: auto;
+}
+
+.birthday-container {
+  background-color: whitesmoke;
+  min-height: 100vh;
+  height: auto;
+  width: 75rem;
+  color: #003d59;
+  box-shadow: 0px 0px 20px 5px rgba(0, 61, 89, 0.8);
+}
+
+.btn-bobo-albert {
+  background-color: #a82e2e;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.profile-container {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 20rem;
+  margin: 1.5rem;
+}
+
+.profile-container img {
+  max-width: 100%;
+  height: auto;
+  display: table;
+}
+
+.profile-container div {
+  margin-left: 1rem;
+}
+
+.profile-title {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.profile-age {
+  display: block;
+  font-size: 0.8rem;
 }
