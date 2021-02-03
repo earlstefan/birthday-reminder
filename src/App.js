@@ -21,11 +21,18 @@ function App() {
           <div>
             <h1>{birthdays.length} BIRTHDAYS TODAY</h1>
             <button className="btn-bobo-albert" onClick={clearAll}>
-              Clear All
+              CLEAR ALL
             </button>
           </div>
           {birthdays.map((data) => {
-            return <Profiles key={data.id} profileDetails={data}></Profiles>;
+            return (
+              <Profiles
+                key={data.id}
+                profileDetails={data}
+                birthdays={birthdays}
+                setBirthdays={setBirthdays}
+              ></Profiles>
+            );
           })}
         </div>
       </header>
@@ -34,7 +41,11 @@ function App() {
 }
 
 const Profiles = (props) => {
-  const { img, name, age } = props.profileDetails;
+  const { id, img, name, age } = props.profileDetails;
+  const removeItem = (id) => {
+    let newBirthdays = props.birthdays.filter((bDay) => bDay.id !== id);
+    props.setBirthdays(newBirthdays);
+  };
   return (
     <>
       <div className="profile-container">
@@ -42,6 +53,9 @@ const Profiles = (props) => {
         <div>
           <span className="profile-title">{name}</span>
           <span className="profile-age">{age} years old</span>
+          <button className="btn-bobo-albert" onClick={() => removeItem(id)}>
+            I DELETE YOU
+          </button>
         </div>
       </div>
     </>
